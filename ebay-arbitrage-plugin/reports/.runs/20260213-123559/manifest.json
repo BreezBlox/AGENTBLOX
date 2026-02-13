@@ -1,0 +1,11 @@
+{
+  "run_id": "20260213-123559",
+  "created_at": "2026-02-13T19:35:59+00:00",
+  "html_report_path": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.html",
+  "candidate_count": 12,
+  "status": "complete",
+  "source_reports": [
+    "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md"
+  ],
+  "evidence_path": "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/evidence.json"
+}

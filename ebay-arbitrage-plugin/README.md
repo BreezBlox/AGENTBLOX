@@ -1,4 +1,4 @@
-# eBay Arbitrage Plugin
+﻿# eBay Arbitrage Plugin
 
 Hybrid eBay marketplace operator and China-sourcing arbitrage analyst for Claude Cowork.
 
@@ -15,12 +15,12 @@ layer that keeps your account healthy.
 
 | Skill | Purpose |
 |-------|---------|
-| **ebay-arbitrage-hub** | Central router â€” reads your request and pulls in the right specialist skills |
-| **listing-optimizer** | eBay SEO, Cassini ranking factors, sold comps, title/item specifics optimization, pricing strategy |
+| **ebay-arbitrage-hub** | Central router that reads your request and pulls in the right specialist skills |
+| **listing-optimizer** | eBay SEO, sold comps, title/item specifics optimization, pricing strategy |
 | **sourcing-analyst** | AliExpress-only supplier vetting, landed cost, MOQ negotiation, shipping lanes, quality management |
 | **arbitrage-calculator** | Full margin calculation, deal scoring, go/no-go decisions, cash flow modeling, portfolio strategy |
 | **compliance-guardian** | VeRO/IP enforcement, policy compliance, restricted categories, suspension risk, returns management |
-| **meta-improver** | Continuous improvement watcher â€” monitors all workflows for process and output improvements |
+| **meta-improver** | Continuous improvement watcher across workflows |
 
 ### Role Agents (Compliance Excluded)
 
@@ -33,45 +33,51 @@ adjudication is intentionally deferred to owner review:
 - `agents/arbitrage-calculator-agent/`
 - `agents/meta-improver-agent/`
 
-Latest 12-item candidate card report:
+Latest canonical dashboard output:
 
-- `reports/ebay-12-item-candidate-cards-2026-02-11.md`
+- `reports/<run-name>.html`
 
 ### Commands (3)
 
 | Command | Usage |
 |---------|-------|
-| `/evaluate-deal` | Full deal evaluation pipeline â€” run with a product description or URL |
-| `/margin-check` | Quick margin calc â€” `/margin-check 29.99 8.50 4.50` |
-| `/landed-cost` | Landed cost from China â€” `/landed-cost 4.20 200 0.5` |
+| `/evaluate-deal` | Full deal evaluation pipeline run with a product description or URL |
+| `/margin-check` | Quick margin calc: `/margin-check 29.99 8.50 4.50` |
+| `/landed-cost` | Landed cost from China: `/landed-cost 4.20 200 0.5` |
 
 ### Reference Documents
 
 - eBay fee structure (FVF by category, promoted listings, international fees)
-- Shipping lanes (Chinaâ†’US/EU methods, transit times, cost ranges)
+- Shipping lanes (China->US/EU methods, transit times, cost ranges)
 - VeRO quick reference (high-risk brands, enforcement patterns)
 - Supplier vetting checklist (scored evaluation framework)
 - Landed cost formula (complete methodology with worked examples)
 
 ### Utility Scripts
 
-- `margin_calculator.py` â€” Full eBay profit margin calculation with all fees
-- `landed_cost.py` â€” True landed cost from China including duties, FX, defects
+- `skills/ebay-arbitrage-hub/scripts/margin_calculator.py`: full eBay profit margin calculation
+- `skills/ebay-arbitrage-hub/scripts/landed_cost.py`: landed cost from China including duties/FX/defects
+- `scripts/exact_match_pipeline.py`: native enrichment + HTML dashboard generation
+- `scripts/render_candidate_dashboard.py`: v2 command-center dashboard renderer
+- `scripts/report_dashboard_server.py`: local server with hide/delete + run/evidence cleanup
+- `scripts/prune_evidence_runs.py`: retention utility for `.runs` and `.evidence`
+- `scripts/validate_command_center_dashboard.py`: contract/parity checks for generated dashboards
 
-## Usage
+## HTML-First Reporting
 
-Just talk naturally. The skills trigger on phrases like:
+The final report output is HTML and presented as a dashboard.
 
-- "Is this product worth selling?"
-- "Evaluate this deal"
-- "Help me optimize my listing"
-- "Is this supplier legit?"
-- "Can I sell [brand] on eBay?"
-- "What's my real margin on this?"
+```powershell
+python scripts/exact_match_pipeline.py reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md --output reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.html
+```
 
-Or use the slash commands for quick calculations.
+This writes:
+
+- `reports/<run-name>.html`
+- `reports/.runs/<run-id>/manifest.json`
+- `reports/.evidence/<run-id>/evidence.json`
 
 ## Setup
 
-No external services or API keys required. The plugin works entirely with built-in
-knowledge, web search for market research, and local Python scripts for calculations.
+No external services or API keys are required by default. The plugin works with built-in
+knowledge, web search for market research, and local Python scripts.

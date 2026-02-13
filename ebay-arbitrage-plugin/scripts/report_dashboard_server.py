@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import shutil
 from datetime import datetime
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
@@ -40,6 +41,51 @@ def is_subpath(base: pathlib.Path, target: pathlib.Path) -> bool:
         return True
     except ValueError:
         return False
+
+
+def cleanup_run_artifacts(root_dir: pathlib.Path, reports_dir: pathlib.Path, deleted_rel_path: str) -> dict:
+    runs_dir = reports_dir / ".runs"
+    evidence_dir = reports_dir / ".evidence"
+    deleted_runs: list[str] = []
+    deleted_evidence: list[str] = []
+
+    if not runs_dir.is_dir():
+        return {"runs": deleted_runs, "evidence": deleted_evidence}
+
+    for manifest in runs_dir.glob("*/manifest.json"):
+        try:
+            payload = json.loads(manifest.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        html_path = str(payload.get("html_report_path", "")).strip()
+        source_reports = [str(value).strip() for value in payload.get("source_reports", [])]
+        run_id = str(payload.get("run_id", manifest.parent.name)).strip() or manifest.parent.name
+        should_delete = deleted_rel_path == html_path or deleted_rel_path in source_reports
+
+        if not should_delete:
+            continue
+
+        evidence_path_raw = str(payload.get("evidence_path", "")).strip()
+        if evidence_path_raw:
+            evidence_target = (root_dir / evidence_path_raw).resolve()
+            if evidence_target.is_file() and is_subpath(reports_dir, evidence_target):
+                evidence_folder = evidence_target.parent
+                if evidence_folder.is_dir():
+                    shutil.rmtree(evidence_folder, ignore_errors=True)
+                    deleted_evidence.append(evidence_folder.relative_to(root_dir).as_posix())
+        else:
+            fallback_evidence = evidence_dir / run_id
+            if fallback_evidence.is_dir():
+                shutil.rmtree(fallback_evidence, ignore_errors=True)
+                deleted_evidence.append(fallback_evidence.relative_to(root_dir).as_posix())
+
+        run_folder = manifest.parent
+        if run_folder.is_dir():
+            shutil.rmtree(run_folder, ignore_errors=True)
+            deleted_runs.append(run_folder.relative_to(root_dir).as_posix())
+
+    return {"runs": deleted_runs, "evidence": deleted_evidence}
 
 
 def make_handler(root_dir: pathlib.Path, reports_dir: pathlib.Path):
@@ -90,7 +136,8 @@ def make_handler(root_dir: pathlib.Path, reports_dir: pathlib.Path):
                 return
 
             target.unlink()
-            self._send_json(200, {"deleted": report_path})
+            cleanup = cleanup_run_artifacts(root_dir, reports_dir, report_path)
+            self._send_json(200, {"deleted": report_path, "cleanup": cleanup})
 
         def do_GET(self):
             parsed = urlparse(self.path)
@@ -125,7 +172,7 @@ def main() -> int:
     server = ThreadingHTTPServer((args.host, args.port), handler)
 
     print(f"serving {root_dir} on http://{args.host}:{args.port}")
-    print("delete API: DELETE /api/reports?path=reports/<file>.md")
+    print("delete API: DELETE /api/reports?path=reports/<file>.md|.html (also cleans linked .runs/.evidence)")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

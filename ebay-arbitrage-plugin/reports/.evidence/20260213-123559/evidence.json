@@ -1,0 +1,218 @@
+[
+  {
+    "candidate_id": "C13",
+    "title": "N64 Controller Joystick Replacement Module",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=n64+controller+joystick+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=N64+Controller+Joystick+Replacement+Module",
+    "match_score": 0.9625,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C13-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C13-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C14",
+    "title": "Game Boy Advance SP Shell Replacement Kit",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=gba+sp+shell+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Game+Boy+Advance+SP+Shell+Replacement+Kit",
+    "match_score": 0.8911,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C14-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C14-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C15",
+    "title": "Retro Game Cartridge Protective Cases",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=n64+cartridge+case&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Retro+Game+Cartridge+Protective+Cases",
+    "match_score": 0.8514,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C15-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C15-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C16",
+    "title": "Retro Game Cartridge Display Stand",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=game+cartridge+display+stand&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Retro+Game+Cartridge+Display+Stand",
+    "match_score": 0.9625,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C16-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C16-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C17",
+    "title": "Trading Card Toploader (3x4, 100 Pack)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=trading+card+top+loader&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Trading+Card+Toploader",
+    "match_score": 0.7263,
+    "match_label": "SIMILAR",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C17-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C17-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C18",
+    "title": "9-Pocket Zipper Trading Card Binder",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=9+pocket+card+binder&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=9+Pocket+Zipper+Trading+Card+Binder",
+    "match_score": 0.8692,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C18-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C18-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C19",
+    "title": "Comic Book Bag and Board Set",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=comic+bag+and+board&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Comic+Book+Bag+and+Board+Set",
+    "match_score": 0.7958,
+    "match_label": "SIMILAR",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C19-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C19-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C20",
+    "title": "CD Jewel Case Replacement Pack",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=cd+jewel+case+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=CD+Jewel+Case+Replacement+Pack",
+    "match_score": 0.8375,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C20-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C20-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C21",
+    "title": "PS4 Controller Thumbstick Replacement Cap Kit",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=ps4+thumbstick+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=PS4+Controller+Thumbstick+Replacement+Cap+Kit",
+    "match_score": 0.8196,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C21-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C21-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C22",
+    "title": "Nintendo Switch Joy-Con Joystick Module (2pc)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=joycon+joystick+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Nintendo+Switch+Joy+Con+Joystick+Module",
+    "match_score": 0.8736,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C22-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C22-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C23",
+    "title": "Xbox Controller Bumper Trigger Repair Kit",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=xbox+controller+bumper+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Xbox+Controller+Bumper+Trigger+Repair+Kit",
+    "match_score": 0.8911,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C23-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C23-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C24",
+    "title": "Retro Console AV Cable Replacement",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-collectors-replacement.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=snes+n64+av+cable+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Retro+Console+AV+Cable+Replacement",
+    "match_score": 0.9625,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C24-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-123559/images/C24-aliexpress.svg"
+    ]
+  }
+]
