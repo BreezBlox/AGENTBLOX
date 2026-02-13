@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meta Improver Agent"
+  short_description: "Find process improvements across arbitrage analysis workflows"
+  default_prompt: "Use $meta-improver-agent to audit this workflow and propose high-impact improvements."

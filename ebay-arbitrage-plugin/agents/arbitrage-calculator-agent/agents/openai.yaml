@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arbitrage Calculator Agent"
+  short_description: "Score eBay deals with strict margin and ROI thresholds"
+  default_prompt: "Use $arbitrage-calculator-agent to score this product and return a go or no-go."

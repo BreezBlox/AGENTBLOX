@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sourcing Analyst Agent"
+  short_description: "Vet suppliers and calculate realistic landed sourcing costs"
+  default_prompt: "Use $sourcing-analyst-agent to compare suppliers and estimate landed cost risk."

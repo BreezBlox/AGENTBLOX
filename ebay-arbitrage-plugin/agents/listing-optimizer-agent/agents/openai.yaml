@@ -1,0 +1,4 @@
+interface:
+  display_name: "Listing Optimizer Agent"
+  short_description: "Improve eBay listing rank, conversion, and price strategy"
+  default_prompt: "Use $listing-optimizer-agent to optimize this listing for visibility and conversion."

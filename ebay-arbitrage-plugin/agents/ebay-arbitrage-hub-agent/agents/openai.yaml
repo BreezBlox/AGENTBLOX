@@ -1,0 +1,4 @@
+interface:
+  display_name: "eBay Arbitrage Hub Agent"
+  short_description: "Route and coordinate non-compliance arbitrage workflows"
+  default_prompt: "Use $ebay-arbitrage-hub-agent to route this deal across sourcing, listing, and margin analysis."
