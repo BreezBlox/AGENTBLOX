@@ -1,10 +1,12 @@
 {
   "name": "ebay-arbitrage",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hybrid eBay marketplace operator and China-sourcing arbitrage analyst with deal evaluation, listing optimization, supplier vetting, compliance checks, and profit calculators",
   "author": {
     "name": "BreezBlox"
   },
+  "category": "Sales",
   "keywords": ["ebay", "arbitrage", "sourcing", "ecommerce", "marketplace"],
-  "repository": "https://github.com/BreezBlox/AGENTBLOX"
+  "repository": "https://github.com/BreezBlox/AGENTBLOX",
+  "homepage": "https://github.com/BreezBlox/AGENTBLOX"
 }

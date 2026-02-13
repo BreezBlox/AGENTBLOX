@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBay Candidate Dashboard - Fresh Niches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            --bg: #0a1014;
+            --card: #131c22;
+            --card2: #1b2730;
+            --accent: #25b7d3;
+            --accent2: #57d67f;
+            --warn: #f4b63f;
+            --danger: #ff5b5b;
+            --text: #e8f1f5;
+            --text2: #9eb1bc;
+            --border: #243643;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #12202a 0%, #0a1014 45%, #070b0f 100%);
+            color: var(--text);
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.45
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        header {
+            text-align: center;
+            padding: 26px 0 18px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 20px
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #25b7d3, #57d67f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        header p {
+            color: var(--text2);
+            margin-top: 6px;
+            font-size: 14px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            margin: 0 3px
+        }
+
+        .badge-green {
+            background: #57d67f22;
+            color: #57d67f;
+            border: 1px solid #57d67f55
+        }
+
+        .badge-blue {
+            background: #25b7d322;
+            color: #25b7d3;
+            border: 1px solid #25b7d355
+        }
+
+        .badge-yellow {
+            background: #f4b63f22;
+            color: #f4b63f;
+            border: 1px solid #f4b63f55
+        }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            margin: 18px 0 16px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .tab {
+            padding: 10px 18px;
+            background: transparent;
+            color: var(--text2);
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+            transition: .2s
+        }
+
+        .tab:hover {
+            color: var(--text)
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent)
+        }
+
+        .panel {
+            display: none
+        }
+
+        .panel.active {
+            display: block
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
+            margin-bottom: 16px
+        }
+
+        .kpi {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center
+        }
+
+        .kpi .label {
+            font-size: 11px;
+            color: var(--text2);
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .kpi .value {
+            font-size: 25px;
+            font-weight: 800;
+            margin-top: 3px
+        }
+
+        .kpi .sub {
+            font-size: 12px;
+            color: var(--text2);
+            margin-top: 3px
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 14px
+        }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 14px
+        }
+
+        .item-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            transition: .2s
+        }
+
+        .item-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px)
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: flex-start;
+            margin-bottom: 8px
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 14px;
+            flex: 1
+        }
+
+        .meta {
+            font-size: 12px;
+            color: var(--text2);
+            margin-bottom: 8px
+        }
+
+        .item-tier {
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 8px;
+            white-space: nowrap
+        }
+
+        .tier1 {
+            background: #57d67f22;
+            color: #57d67f
+        }
+
+        .tier2 {
+            background: #25b7d322;
+            color: #25b7d3
+        }
+
+        .tier3 {
+            background: #f4b63f22;
+            color: #f4b63f
+        }
+
+        .item-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 8px
+        }
+
+        .item-stat {
+            padding: 6px 10px;
+            background: var(--card2);
+            border-radius: 8px
+        }
+
+        .item-stat .s-label {
+            font-size: 10px;
+            color: var(--text2);
+            text-transform: uppercase
+        }
+
+        .item-stat .s-value {
+            font-size: 15px;
+            font-weight: 700
+        }
+
+        .terms {
+            font-size: 12px;
+            color: var(--text2);
+            margin-bottom: 8px
+        }
+
+        .links-row {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap
+        }
+
+        .link-chip {
+            text-decoration: none;
+            background: #25b7d322;
+            border: 1px solid #25b7d355;
+            color: #a8e9f6;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .link-chip:hover {
+            background: #25b7d344
+        }
+
+        .link-chip.source {
+            background: #57d67f22;
+            border-color: #57d67f55;
+            color: #c6f6d9
+        }
+
+        @media(max-width:768px) {
+            .item-grid {
+                grid-template-columns: 1fr
+            }
+
+            .tabs {
+                flex-wrap: wrap
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>eBay Candidate Dashboard - Fresh Niches</h1>
+            <p>2026-02-13 | US (`ebay.com`) | Report: ebay-12-item-candidates-2026-02-13-fresh-niches.md</p>
+            <div style="margin-top:10px">
+                <span class="badge badge-green">12/12 GREENLIGHT</span>
+                <span class="badge badge-blue">Avg Margin 31.0%</span>
+                <span class="badge badge-blue">Avg ROI 60.1%</span>
+            </div>
+        </header>
+
+        <div class="kpi-row">
+            <div class="kpi">
+                <div class="label">Candidates</div>
+                <div class="value">12</div>
+                <div class="sub">Fresh Niches Sprint</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Greenlights</div>
+                <div class="value" style="color:var(--accent2)">12</div>
+                <div class="sub">100% Pass Rate</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Avg Landed</div>
+                <div class="value">$5.40</div>
+                <div class="sub">Per unit</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Avg Sell</div>
+                <div class="value">$18.50</div>
+                <div class="sub">Per unit</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Avg Net Profit</div>
+                <div class="value" style="color:var(--accent2)">$5.73</div>
+                <div class="sub">Per unit</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Avg ROI</div>
+                <div class="value" style="color:var(--accent2)">60.1%</div>
+                <div class="sub">Return on Investment</div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab" onclick="switchTab('overview')">Overview</button>
+            <button class="tab active" onclick="switchTab('items')">Candidates</button>
+            <button class="tab" onclick="switchTab('links')">Links</button>
+        </div>
+
+        <div class="panel active" id="items">
+            <div class="item-grid">
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#1 Adjustable Aluminum Laptop Stand</div>
+                        <span class="item-tier tier1">TIER 1</span>
+                    </div>
+                    <div class="meta">N01 | Tech Accessories | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$23.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$7.50</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">33.5%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">66.7%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> laptop stand adjustable aluminum, foldable laptop
+                        riser</div>
+                    <div class="links-row">
+                        <a class="link-chip"
+                            href="https://www.ebay.com/sch/i.html?_nkw=adjustable+laptop+stand+aluminum"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=adjustable+laptop+stand"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#2 Magnetic Phone Car Mount</div>
+                        <span class="item-tier tier1">TIER 1</span>
+                    </div>
+                    <div class="meta">N02 | Tech Accessories | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$17.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$4.50</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">38.6%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">99.3%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> magnetic phone car mount, dashboard phone holder
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=magnetic+phone+car+mount"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=magnetic+phone+car+mount"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#3 Cable Management Clips (20pc)</div>
+                        <span class="item-tier tier1">TIER 1</span>
+                    </div>
+                    <div class="meta">N03 | Tech Accessories | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$11.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$2.50</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">32.2%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">63.3%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> cable management clips, cable organizer desk
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=cable+management+clips"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=cable+management+clips"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#4 Jade Roller & Gua Sha Set</div>
+                        <span class="item-tier tier2">TIER 2</span>
+                    </div>
+                    <div class="meta">N04 | Health & Beauty | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$13.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$4.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">29.0%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">52.3%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> jade roller gua sha set, face roller set</div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=jade+roller+gua+sha"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=jade+roller+gua+sha"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#5 Blue Light Blocking Glasses</div>
+                        <span class="item-tier tier3">TIER 3</span>
+                    </div>
+                    <div class="meta">N05 | Health & Beauty | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$12.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$3.50</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">28.6%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">53.6%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> blue light glasses, computer glasses anti blue
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=blue+light+blocking+glasses"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=blue+light+blocking+glasses"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#6 Derma Roller (0.25mm)</div>
+                        <span class="item-tier tier2">TIER 2</span>
+                    </div>
+                    <div class="meta">N06 | Health & Beauty | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$11.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$3.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">28.0%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">54.2%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> derma roller 0.25mm, microneedling roller</div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=derma+roller+0.25mm"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=derma+roller+0.25mm"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#7 Silicone Coaching Utensil Set</div>
+                        <span class="item-tier tier2">TIER 2</span>
+                    </div>
+                    <div class="meta">N07 | Kitchen & Dining | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$23.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$7.80</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">30.1%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">54.3%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> silicone utensil set, kitchen tools wooden handle
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=silicone+cooking+utensils"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=silicone+cooking+utensil+set"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#8 Vegetable Chopper / Dicer</div>
+                        <span class="item-tier tier3">TIER 3</span>
+                    </div>
+                    <div class="meta">N08 | Kitchen & Dining | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$21.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$7.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">28.8%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">50.1%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> vegetable chopper dicer, onion chopper multi
+                        blade</div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=vegetable+chopper"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=vegetable+chopper"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#9 Rotating Spice Rack Organizer</div>
+                        <span class="item-tier tier2">TIER 2</span>
+                    </div>
+                    <div class="meta">N09 | Kitchen & Dining | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$25.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$8.50</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">31.7%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">57.2%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> spice rack rotating, lazy susan spice organizer
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=spice+rack+organizer"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=rotating+spice+rack"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#10 Mesh Desk Organizer</div>
+                        <span class="item-tier tier2">TIER 2</span>
+                    </div>
+                    <div class="meta">N10 | Office & Desk | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$19.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$6.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">30.7%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">56.9%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> mesh desk organizer, desktop office organizer
+                    </div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=mesh+desk+organizer"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=mesh+desk+organizer"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#11 LED Rechargeable Book Light</div>
+                        <span class="item-tier tier1">TIER 1</span>
+                    </div>
+                    <div class="meta">N11 | Office & Desk | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$14.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$4.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">32.8%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">63.2%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> led book light rechargeable, clip on reading
+                        light</div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=led+book+light+rechargeable"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=led+book+light+rechargeable"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-header">
+                        <div class="item-name">#12 Bamboo Drawer Organizer</div>
+                        <span class="item-tier tier3">TIER 3</span>
+                    </div>
+                    <div class="meta">N12 | Office & Desk | ebay-12-item-candidates-2026-02-13-fresh-niches.md</div>
+                    <div class="item-stats">
+                        <div class="item-stat">
+                            <div class="s-label">Sell</div>
+                            <div class="s-value">$20.99</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Landed</div>
+                            <div class="s-value">$7.00</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">Margin</div>
+                            <div class="s-value">28.5%</div>
+                        </div>
+                        <div class="item-stat">
+                            <div class="s-label">ROI</div>
+                            <div class="s-value">49.6%</div>
+                        </div>
+                    </div>
+                    <div class="terms"><strong>Primary terms:</strong> bamboo drawer organizer, expandable kitchen
+                        organizer</div>
+                    <div class="links-row">
+                        <a class="link-chip" href="https://www.ebay.com/sch/i.html?_nkw=bamboo+drawer+organizer"
+                            target="_blank">eBay Comp 1</a>
+                        <a class="link-chip source"
+                            href="https://www.aliexpress.us/wholesale?SearchText=bamboo+drawer+organizer"
+                            target="_blank">Source 1</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
