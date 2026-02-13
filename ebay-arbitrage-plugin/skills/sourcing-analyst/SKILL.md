@@ -2,7 +2,7 @@
 name: ebay-arbitrage:sourcing-analyst
 description: >
   China-side sourcing and fulfillment analyst for eBay arbitrage. Use when the user needs
-  to vet suppliers on AliExpress, Alibaba, 1688, or DHgate; calculate true landed cost from
+  to vet suppliers on AliExpress; calculate true landed cost from
   China; evaluate MOQ requirements; understand shipping lanes and real delivery times; assess
   quality variance risk; or navigate the gap between "supplier listing price" and "actual cost
   of goods received." Also trigger for sourcing agent negotiation, sample ordering strategy,
@@ -21,10 +21,9 @@ The core tension in China-sourced eBay arbitrage is this: the margins look incre
 spreadsheet, but the gap between "supplier price" and "product in your customer's hands" is
 where most of those margins evaporate. Your job is to make that gap visible and manageable.
 
-## Sourcing Platform Hierarchy
+## AliExpress-Only Sourcing Policy
 
-Different platforms serve different stages of the arbitrage journey. Help the user pick the
-right one:
+Use AliExpress only. Do not propose or link Alibaba, 1688, or DHgate in new recommendations.
 
 ### AliExpress (aliexpress.com)
 **Best for:** Validation, small-batch testing, dropship-style fulfillment
@@ -34,34 +33,12 @@ right one:
 - Product photos are frequently aspirational. The item that arrives may differ from the listing
 - Seller ratings mean something but can be gamed. Look at store age + review photo consistency
 - ePacket/Standard Shipping says "15-30 days" but plan for 20-45 days in reality
-- **Use case:** Order 5-10 units to test demand before committing to Alibaba MOQs
+- **Use case:** Order 5-50 units for validation and controlled scaling on one platform.
 
-### Alibaba (alibaba.com)
-**Best for:** Scaling past validation — MOQ buys of 50-500+ units
-**Reality check:**
-- Most "factories" on Alibaba are trading companies. This isn't necessarily bad (they aggregate
-  orders, handle QC, manage logistics) but it adds a markup layer
-- Gold Supplier status is paid, not earned. It means they spent $3-6K/year, not that they're trustworthy
-- Trade Assurance protects against non-delivery but not against "technically delivered but garbage quality"
-- Quoted prices are starting points for negotiation. First quote is usually 15-30% above actual price
-- Minimum Order Quantities (MOQs) are usually negotiable for first orders — "MOQ: 500" often means
-  "we'll do 100 at a slightly higher per-unit price"
-- **Use case:** Once you've validated demand via AliExpress test batches, move here for real margins
-
-### 1688.com (1688.com)
-**Best for:** Experienced sourcing — the Chinese domestic wholesale market
-**Reality check:**
-- Prices are significantly lower than Alibaba (often 30-50% less) because it's the domestic platform
-- Everything is in Chinese. You need a sourcing agent or strong translation tools
-- No Trade Assurance equivalent. Disputes are harder to resolve
-- Many suppliers won't deal with international buyers directly
-- Quality varies wildly — there's no "international buyer" quality expectation
-- **Use case:** Advanced arbitrage where the margin difference justifies the added complexity
-
-### DHgate (dhgate.com)
-**Best for:** Mid-range between AliExpress and Alibaba — smaller MOQs than Alibaba, sometimes
-better prices than AliExpress
-**Reality check:** Similar trust issues to AliExpress. Less selection than Alibaba.
+### Legacy Platforms (Not Allowed)
+- Alibaba: not allowed in this workflow.
+- 1688: not allowed in this workflow.
+- DHgate: not allowed in this workflow.
 
 ## Supplier Vetting Framework
 
@@ -118,19 +95,19 @@ Read `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/landed-cost-for
    Section 301 tariffs on Chinese goods add an additional 7.5-25% on many categories
 5. **Customs brokerage** — if using a freight forwarder, $50-200 per shipment
 6. **Domestic last-mile** — getting it from port/airport to your location
-7. **Payment platform fee** — PayPal/Alibaba Trade Assurance typically 3-5%
+7. **Payment platform fee** — card/PayPal processing typically 3-5%
 8. **FX spread** — if paying in USD on a CNY-priced platform, the conversion spread is 1-3%
 9. **Quality variance buffer** — budget 3-5% for defective units you can't sell
 
 ### The "True Cost" Test
 Take the supplier's listing price. Multiply by 2.0-2.5x. That's usually close to the real
-landed cost for small-quantity AliExpress orders. For Alibaba orders at MOQ, multiply by
+landed cost for small-quantity AliExpress orders. For larger AliExpress quantity breaks, multiply by
 1.4-1.8x. If the eBay sold price doesn't support that multiplier with healthy margin remaining,
 the deal probably doesn't work.
 
 ## MOQ Negotiation
 
-Most MOQ numbers on Alibaba are soft targets, not hard walls. Here's how to navigate:
+Most AliExpress quantity-break numbers are soft targets, not hard walls. Here's how to navigate:
 
 **First order:** Most suppliers will do 50-80% of stated MOQ at a 5-15% price premium for
 a first order. Frame it as a "trial order" with clear intent to scale. "I'd like to start

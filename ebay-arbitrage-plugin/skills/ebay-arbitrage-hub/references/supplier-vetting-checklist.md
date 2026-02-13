@@ -1,7 +1,7 @@
 # Supplier Vetting Checklist
 
-Use this checklist when evaluating a potential supplier on AliExpress, Alibaba, 1688, or
-DHgate. Score each section and use the total to make a go/no-go decision on the supplier.
+AliExpress-only policy: use this checklist for AliExpress suppliers. Do not use Alibaba, 1688,
+or DHgate links in this workflow.
 
 ## Scoring System
 
@@ -25,7 +25,7 @@ Each section scores 0-10. Total possible: 70 points.
 | Positive feedback rate >95% | +2 | Below 90% = 0 and consider this a red flag |
 | Transaction volume >500 orders | +2 | Under 100 = 0 points |
 | Responds to messages within 24 hours | +2 | Test this before scoring |
-| Gold Supplier / Top Rated (Alibaba/AliExpress) | +1 | Nice to have but paid status — not definitive |
+| Top Rated / Store badges (AliExpress) | +1 | Nice to have but paid status — not definitive |
 
 **Red flags that override scoring:**
 - Multiple reviews mentioning "scam" or "fake" → stop evaluation

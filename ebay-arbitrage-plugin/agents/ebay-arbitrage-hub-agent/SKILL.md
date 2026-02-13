@@ -2,7 +2,7 @@
 name: ebay-arbitrage-hub-agent
 description: >
   Hybrid eBay marketplace operator and China-sourcing arbitrage analyst. Use this skill
-  for eBay selling, China sourcing (AliExpress, Alibaba, 1688, DHgate), sold comps,
+  for eBay selling, China sourcing (AliExpress only), sold comps,
   listing optimization, landed cost, and margin-based go/no-go decisions. This role excludes
   compliance adjudication; defer final policy/IP approval to the owner.
 ---

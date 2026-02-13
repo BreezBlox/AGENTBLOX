@@ -2,8 +2,8 @@
 name: ebay-arbitrage-hub
 description: >
   Hybrid eBay marketplace operator and China-sourcing arbitrage analyst. Use this skill
-  whenever the user mentions eBay selling, product sourcing from China (AliExpress, Alibaba,
-  1688, Temu wholesale, DHgate), dropshipping, online arbitrage, marketplace fees, listing
+  whenever the user mentions eBay selling, product sourcing from China (AliExpress only),
+  dropshipping, online arbitrage, marketplace fees, listing
   optimization, sold comps, Terapeak, product research, supplier vetting, landed cost,
   MOQ negotiation, shipping from China, eBay SEO, returns risk, VeRO/IP compliance,
   or any combination of "buy low from Asia, sell on eBay." Also trigger when the user
@@ -26,6 +26,11 @@ profitable on paper but fall apart because of eBay's fee structure on that categ
 because the only supplier ships via sea freight with a 45-day lead time, or because the brand
 is on VeRO and the listing will be killed within 24 hours. You catch all of that.
 
+## Sourcing Policy
+
+Use AliExpress only for sourcing recommendations and source-link output. Do not propose or
+link Alibaba, 1688, or DHgate options in new workflows.
+
 ## How This Plugin Is Organized
 
 This is a multi-skill domain with five specialist sub-skills. Read the relevant
@@ -37,7 +42,7 @@ that's by design.
 | Sub-Skill | When to Read | Path |
 |-----------|-------------|------|
 | **Listing Optimizer** | eBay SEO, sold comps, Terapeak analysis, listing copywriting, pricing strategy, fee math | `${CLAUDE_PLUGIN_ROOT}/skills/listing-optimizer/SKILL.md` |
-| **Sourcing Analyst** | Supplier vetting, AliExpress/Alibaba research, landed cost, MOQ, shipping lanes, quality risk | `${CLAUDE_PLUGIN_ROOT}/skills/sourcing-analyst/SKILL.md` |
+| **Sourcing Analyst** | Supplier vetting, AliExpress sourcing, landed cost, MOQ, shipping lanes, quality risk | `${CLAUDE_PLUGIN_ROOT}/skills/sourcing-analyst/SKILL.md` |
 | **Arbitrage Calculator** | Profit/ROI analysis, deal scoring, demand-supply matching, go/no-go decisions | `${CLAUDE_PLUGIN_ROOT}/skills/arbitrage-calculator/SKILL.md` |
 | **Compliance Guardian** | VeRO/IP risk, eBay policy, restricted categories, suspension risk, returns exposure | `${CLAUDE_PLUGIN_ROOT}/skills/compliance-guardian/SKILL.md` |
 | **Meta Improver** | Process improvement, knowledge gaps, workflow optimization, output quality enhancement | `${CLAUDE_PLUGIN_ROOT}/skills/meta-improver/SKILL.md` |
@@ -82,7 +87,7 @@ These reference docs are available to all sub-skills:
 | eBay Fee Structure | FVF by category, insertion fees, promoted listings, international fees, payment processing | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/ebay-fee-structure.md` |
 | Shipping Lanes | China→US/EU shipping methods, real transit times, cost ranges, customs considerations | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/shipping-lanes.md` |
 | VeRO Quick Reference | High-risk brands, IP enforcement patterns, safe harbor categories | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/vero-quick-ref.md` |
-| Supplier Vetting Checklist | Due diligence framework for AliExpress/Alibaba/1688 suppliers | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/supplier-vetting-checklist.md` |
+| Supplier Vetting Checklist | Due diligence framework for AliExpress suppliers | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/supplier-vetting-checklist.md` |
 | Landed Cost Formula | Complete landed cost methodology including duties, fees, insurance, FX risk | `${CLAUDE_PLUGIN_ROOT}/skills/ebay-arbitrage-hub/references/landed-cost-formula.md` |
 
 ## Utility Scripts

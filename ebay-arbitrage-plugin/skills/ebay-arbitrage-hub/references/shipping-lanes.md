@@ -4,12 +4,15 @@
 > and trade policy. Transit times below are estimates based on normal conditions — peak
 > season (October-January) can add 5-15 days to all methods. Always confirm current rates
 > with the specific carrier or freight forwarder.
+>
+> **Sourcing Policy:** AliExpress-only workflow. Treat Alibaba-specific references below as
+> legacy context, not a recommended sourcing path.
 
 ## Shipping Method Comparison
 
 ### Consumer / Small Parcel Methods
 
-These are what you'll use when ordering from AliExpress or small Alibaba orders.
+These are what you'll use when ordering from AliExpress.
 
 #### China Post / ePacket
 - **Transit time:** 20-45 days (US), 25-50 days (EU)

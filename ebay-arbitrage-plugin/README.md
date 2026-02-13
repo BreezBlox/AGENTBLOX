@@ -17,7 +17,7 @@ layer that keeps your account healthy.
 |-------|---------|
 | **ebay-arbitrage-hub** | Central router â€” reads your request and pulls in the right specialist skills |
 | **listing-optimizer** | eBay SEO, Cassini ranking factors, sold comps, title/item specifics optimization, pricing strategy |
-| **sourcing-analyst** | AliExpress/Alibaba/1688 supplier vetting, landed cost, MOQ negotiation, shipping lanes, quality management |
+| **sourcing-analyst** | AliExpress-only supplier vetting, landed cost, MOQ negotiation, shipping lanes, quality management |
 | **arbitrage-calculator** | Full margin calculation, deal scoring, go/no-go decisions, cash flow modeling, portfolio strategy |
 | **compliance-guardian** | VeRO/IP enforcement, policy compliance, restricted categories, suspension risk, returns management |
 | **meta-improver** | Continuous improvement watcher â€” monitors all workflows for process and output improvements |

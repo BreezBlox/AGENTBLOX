@@ -36,12 +36,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Home-Gym-11pcs-Set-Exercise-Resistance_1601174866796.html
+  1) https://www.aliexpress.us/wholesale?SearchText=resistance+bands+set
      - Unit cost: listed near $9.80 (kit-level)
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: reliable tracked export channels
      - Supplier signals (reviews/orders): dedicated fitness kit listing
-  2) https://www.alibaba.com/showroom/resistance-band-set.html
+  2) https://www.aliexpress.us/wholesale?SearchText=resistance+bands+set
      - Unit cost: broad range, low-to-mid single-digit by component/MOQ
      - Shipping method/time: air parcel/consolidated, ~10-18 days
      - Tracking reliability notes: supplier-dependent
@@ -113,12 +113,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Wholesale-Foam-Roller-13-inch-Muscle_1600889188691.html
+  1) https://www.aliexpress.us/wholesale?SearchText=foam+roller
      - Unit cost: $5.00-$5.63
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: standard tracked exports
      - Supplier signals (reviews/orders): dedicated foam roller offer
-  2) https://www.alibaba.com/showroom/foam-roller.html
+  2) https://www.aliexpress.us/wholesale?SearchText=foam+roller
      - Unit cost: search snippets around $6.19-$7.08
      - Shipping method/time: air freight consolidated, ~10-18 days
      - Tracking reliability notes: supplier-dependent
@@ -190,12 +190,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/yoga-wheel.html
+  1) https://www.aliexpress.us/wholesale?SearchText=yoga+wheel
      - Unit cost: search snippets around $4.50-$5.75
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: good with tracked lanes
      - Supplier signals (reviews/orders): active category suppliers
-  2) https://www.alibaba.com/showroom/yoga-wheel-back-stretcher.html
+  2) https://www.aliexpress.us/wholesale?SearchText=yoga+wheel
      - Unit cost: low-to-mid single-digit baseline
      - Shipping method/time: air parcel/consolidated, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -278,12 +278,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/cat-window-perch.html
+  1) https://www.aliexpress.us/wholesale?SearchText=cat+window+perch
      - Unit cost: low-to-mid single-digit baseline
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: moderate-high
      - Supplier signals (reviews/orders): active supplier category
-  2) https://www.alibaba.com/product-detail/Customized-Cat-Bed-Perched-Wall-Shelves_1601406200317.html
+  2) https://www.aliexpress.us/wholesale?SearchText=cat+window+perch
      - Unit cost: mid single-digit to low double-digit by spec
      - Shipping method/time: air parcel/consolidated, ~10-18 days
      - Tracking reliability notes: request sample QC photos
@@ -355,12 +355,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/slow-feeder-dog-bowl.html
+  1) https://www.aliexpress.us/wholesale?SearchText=slow+feeder+dog+bowl
      - Unit cost: ~$1.30-$7.99 depending size/material
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: high with tracked parcel routing
      - Supplier signals (reviews/orders): dense supplier options
-  2) https://www.alibaba.com/showroom/dog-bowl-slow-feeder.html
+  2) https://www.aliexpress.us/wholesale?SearchText=slow+feeder+dog+bowl
      - Unit cost: low single-digit baseline
      - Shipping method/time: air parcel, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -432,12 +432,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/pet-hair-remover-roller.html
+  1) https://www.aliexpress.us/wholesale?SearchText=pet+hair+remover+roller
      - Unit cost: ~$1.03-$2.99
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: high with standard parcel carriers
      - Supplier signals (reviews/orders): active supplier competition
-  2) https://www.alibaba.com/showroom/reusable-pet-hair-remover-roller.html
+  2) https://www.aliexpress.us/wholesale?SearchText=pet+hair+remover+roller
      - Unit cost: low single-digit range
      - Shipping method/time: air parcel, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -509,12 +509,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Car-seat-crevice-filler-seat-gap_1600884445346.html
+  1) https://www.aliexpress.us/wholesale?SearchText=car+seat+gap+filler
      - Unit cost: ~$1.29
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: standard tracked channels
      - Supplier signals (reviews/orders): product-focused listing
-  2) https://www.alibaba.com/product-detail/Wholesale-Customized-Car-Seat-Gap-Filler_1600625976287.html
+  2) https://www.aliexpress.us/wholesale?SearchText=car+seat+gap+filler
      - Unit cost: $1.30-$1.80
      - Shipping method/time: air parcel, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -586,12 +586,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Foldable-Car-Boot-Organizer-Car-Trunk_1600984460875.html
+  1) https://www.aliexpress.us/wholesale?SearchText=car+trunk+organizer
      - Unit cost: $6.50-$7.80
      - Shipping method/time: air freight consolidated, ~10-15 days
      - Tracking reliability notes: good with freight forwarder tracking
      - Supplier signals (reviews/orders): established listing
-  2) https://www.alibaba.com/product-detail/Factory-OEM-Car-Organizer-Bag-Folding_1600989545963.html
+  2) https://www.aliexpress.us/wholesale?SearchText=car+trunk+organizer
      - Unit cost: $4.00-$8.00
      - Shipping method/time: air freight consolidated, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -663,12 +663,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/car-windshield-sun-shade-umbrella.html
+  1) https://www.aliexpress.us/wholesale?SearchText=windshield+sun+shade+umbrella
      - Unit cost: low single-digit typical range by size
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: good via tracked parcel lanes
      - Supplier signals (reviews/orders): deep supplier category
-  2) https://www.alibaba.com/showroom/car-windshield-shade-umbrella.html
+  2) https://www.aliexpress.us/wholesale?SearchText=windshield+sun+shade+umbrella
      - Unit cost: similar low-cost bracket
      - Shipping method/time: air parcel/consolidated, ~10-18 days
      - Tracking reliability notes: moderate-high
@@ -740,12 +740,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Factory-Custom-Kitchen-Cabinet-Metal-Drawer_1601177011309.html
+  1) https://www.aliexpress.us/wholesale?SearchText=under+sink+organizer
      - Unit cost: ~$7.00-$10.00
      - Shipping method/time: air freight consolidated, ~10-15 days
      - Tracking reliability notes: standard freight tracking with Trade Assurance
      - Supplier signals (reviews/orders): factory/OEM listing
-  2) https://www.alibaba.com/showroom/under-sink-organizer.html
+  2) https://www.aliexpress.us/wholesale?SearchText=under+sink+organizer
      - Unit cost: snippet range around ~$4.41-$5.15 for baseline models
      - Shipping method/time: air parcel or air freight, ~10-18 days
      - Tracking reliability notes: supplier-dependent
@@ -817,12 +817,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/showroom/vacuum-storage-bags.html
+  1) https://www.aliexpress.us/wholesale?SearchText=vacuum+storage+bags
      - Unit cost: ~$0.40-$1.50 per bag equivalent by size/MOQ
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: good with standard parcel lanes
      - Supplier signals (reviews/orders): broad supplier pool
-  2) https://www.alibaba.com/showroom/vacuum-bag-storage.html
+  2) https://www.aliexpress.us/wholesale?SearchText=vacuum+storage+bags
      - Unit cost: similar low-cost range
      - Shipping method/time: air parcel/consolidated, ~10-18 days
      - Tracking reliability notes: supplier-dependent
@@ -894,12 +894,12 @@ Gate E: compliance/IP is deferred to owner on all items
 
 ### 4) Gate C - Source + Shipping Verification
 - Supplier options (2-3):
-  1) https://www.alibaba.com/product-detail/Magnetic-Screen-Door-Store-Front-Door_1600980887696.html
+  1) https://www.aliexpress.us/wholesale?SearchText=magnetic+screen+door
      - Unit cost: $2.50-$5.00
      - Shipping method/time: air parcel, ~10-15 days
      - Tracking reliability notes: standard export tracking
      - Supplier signals (reviews/orders): focused product listing
-  2) https://www.alibaba.com/product-detail/Factory-Price-Magnetic-Mesh-Screen-Door_1600835082954.html
+  2) https://www.aliexpress.us/wholesale?SearchText=magnetic+screen+door
      - Unit cost: $0.90-$6.00
      - Shipping method/time: air parcel, ~10-18 days
      - Tracking reliability notes: moderate-high

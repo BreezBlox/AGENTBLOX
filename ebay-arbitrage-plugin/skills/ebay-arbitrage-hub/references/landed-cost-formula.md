@@ -1,5 +1,8 @@
 # Landed Cost Formula
 
+AliExpress-only policy: use AliExpress links and supplier flows for this workflow.
+Any Alibaba/1688 mentions in this document are legacy reference context.
+
 This document defines the complete methodology for calculating the true landed cost of a
 product sourced from China for eBay resale. "Landed cost" means: the total cost to get one
 sellable unit from the supplier's warehouse to your shipping station, ready to be listed
