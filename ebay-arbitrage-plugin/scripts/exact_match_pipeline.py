@@ -10,13 +10,15 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
-from urllib.parse import parse_qs, unquote_plus, urlparse
+from urllib.parse import parse_qs, unquote_plus, urlencode, urlparse
 
 from render_candidate_dashboard import parse_report, resolve_inputs, resolve_out, display_path
 
 STOPWORDS = {
     "and", "the", "for", "with", "set", "kit", "new", "inch", "in", "to", "of", "on", "by", "from", "pack"
 }
+ALIEXPRESS_DOMAIN_TOKENS = ("aliexpress.",)
+EBAY_DOMAIN_TOKENS = ("ebay.",)
 
 
 def parse_args() -> argparse.Namespace:
@@ -27,6 +29,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--threshold", type=float, default=0.65, help="Similarity threshold for SIMILAR pass")
     p.add_argument("--keep-runs", type=int, default=3, help="Retention count for .runs and .evidence")
     p.add_argument("--status", default="complete", help="Manifest status value")
+    p.add_argument("--traffic-share", type=float, default=0.15, help="Share of candidates to tag as TRAFFIC_SEED")
+    p.add_argument("--traffic-margin-min", type=float, default=-2.0, help="Minimum margin %% for traffic lane")
+    p.add_argument("--traffic-margin-max", type=float, default=12.0, help="Maximum margin %% for traffic lane")
+    p.add_argument("--traffic-target-margin", type=float, default=3.0, help="Target break-even margin %% for traffic lane")
     return p.parse_args()
 
 
@@ -78,6 +84,100 @@ def sanitize_file(value: str) -> str:
     return cleaned[:60] or "candidate"
 
 
+def is_domain(url: str, domain_tokens: tuple[str, ...]) -> bool:
+    host = urlparse(url).netloc.lower()
+    return any(token in host for token in domain_tokens)
+
+
+def build_aliexpress_search_url(query: str) -> str:
+    return f"https://www.aliexpress.us/wholesale?{urlencode({'SearchText': query})}"
+
+
+def build_ebay_sold_complete_url(query: str) -> str:
+    qs = urlencode(
+        {
+            "_nkw": query,
+            "LH_Sold": "1",
+            "LH_Complete": "1",
+            "_sop": "13",
+        }
+    )
+    return f"https://www.ebay.com/sch/i.html?{qs}"
+
+
+def choose_aliexpress_url(title: str, terms: list[str], preferred: str, source_links: list[str]) -> str:
+    if preferred and is_domain(preferred, ALIEXPRESS_DOMAIN_TOKENS):
+        return preferred
+    for link in source_links:
+        if is_domain(link, ALIEXPRESS_DOMAIN_TOKENS):
+            return link
+    query = " ".join([terms[0]] if terms else [title]).strip()
+    return build_aliexpress_search_url(query or title)
+
+
+def choose_ebay_listing_url(title: str, terms: list[str], preferred: str, ebay_links: list[str]) -> str:
+    if preferred and is_domain(preferred, EBAY_DOMAIN_TOKENS):
+        return preferred
+    for link in ebay_links:
+        if is_domain(link, EBAY_DOMAIN_TOKENS):
+            return link
+    query = " ".join([terms[0]] if terms else [title]).strip()
+    return build_ebay_sold_complete_url(query or title)
+
+
+def build_ebay_validation_url(title: str, terms: list[str], ebay_listing_url: str, ebay_links: list[str]) -> str:
+    # Always validate through sold/completed search, even if pinned listing is a direct item page.
+    for link in ebay_links:
+        if not is_domain(link, EBAY_DOMAIN_TOKENS):
+            continue
+        parsed = urlparse(link)
+        q = parse_qs(parsed.query)
+        if q.get("_nkw"):
+            query = q["_nkw"][0]
+            return build_ebay_sold_complete_url(query)
+    for link in [ebay_listing_url]:
+        if not link or not is_domain(link, EBAY_DOMAIN_TOKENS):
+            continue
+        parsed = urlparse(link)
+        q = parse_qs(parsed.query)
+        if q.get("_nkw"):
+            return build_ebay_sold_complete_url(q["_nkw"][0])
+    query = " ".join([terms[0]] if terms else [title]).strip()
+    return build_ebay_sold_complete_url(query or title)
+
+
+def assign_lanes(
+    records: list[dict],
+    share: float,
+    margin_min: float,
+    margin_max: float,
+    target_margin: float,
+) -> None:
+    if not records:
+        return
+    target_count = max(1, round(len(records) * max(0.0, min(1.0, share))))
+    eligible = [
+        row
+        for row in records
+        if row.get("estimated_margin_pct") is not None
+        and margin_min <= float(row["estimated_margin_pct"]) <= margin_max
+    ]
+    if not eligible:
+        eligible = sorted(
+            [row for row in records if row.get("estimated_margin_pct") is not None],
+            key=lambda row: abs(float(row["estimated_margin_pct"])),
+        )
+    chosen_ids = {
+        id(row)
+        for row in sorted(
+            eligible,
+            key=lambda row: abs(float(row.get("estimated_margin_pct", 0.0)) - target_margin),
+        )[:target_count]
+    }
+    for row in records:
+        row["lane"] = "TRAFFIC_SEED" if id(row) in chosen_ids else "CORE_MARGIN"
+
+
 def write_svg(path: pathlib.Path, heading: str, subtitle: str, color: str) -> None:
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240">
 <rect width="100%" height="100%" fill="#10141d"/>
@@ -89,21 +189,22 @@ def write_svg(path: pathlib.Path, heading: str, subtitle: str, color: str) -> No
     path.write_text(svg, encoding="utf-8")
 
 
-def candidate_records(markdown_paths: list[pathlib.Path]) -> tuple[list[dict], int]:
+def candidate_records(
+    markdown_paths: list[pathlib.Path],
+    traffic_share: float,
+    traffic_margin_min: float,
+    traffic_margin_max: float,
+    traffic_target_margin: float,
+) -> tuple[list[dict], int]:
     rows: list[dict] = []
     total = 0
     for md in markdown_paths:
         parsed = parse_report(md.read_text(encoding="utf-8"), display_path(md), md.name)
         for c in parsed.candidates:
             total += 1
-            ebay = c.pinned_ebay_listing or (c.ebay_links[0] if c.ebay_links else "")
-            source = c.pinned_aliexpress_listing or (c.source_links[0] if c.source_links else "")
-            if not source:
-                query = "+".join(c.title.split())
-                source = f"https://www.aliexpress.us/wholesale?SearchText={query}"
-            if not ebay:
-                query = "+".join((c.primary_terms[0] if c.primary_terms else c.title).split())
-                ebay = f"https://www.ebay.com/sch/i.html?_nkw={query}&LH_Sold=1&LH_Complete=1&_sop=13"
+            source = choose_aliexpress_url(c.title, c.primary_terms, c.pinned_aliexpress_listing, c.source_links)
+            ebay = choose_ebay_listing_url(c.title, c.primary_terms, c.pinned_ebay_listing, c.ebay_links)
+            ebay_validation_url = build_ebay_validation_url(c.title, c.primary_terms, ebay, c.ebay_links)
             score = score_match(c.title, c.primary_terms, ebay, source)
             rows.append(
                 {
@@ -111,16 +212,20 @@ def candidate_records(markdown_paths: list[pathlib.Path]) -> tuple[list[dict], i
                     "title": c.title,
                     "source_report": c.source_report_path,
                     "ebay_listing_url": ebay,
+                    "ebay_validation_url": ebay_validation_url,
                     "aliexpress_listing_url": source,
                     "match_score": score,
                     "match_label": label_for(score),
                     "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+                    "estimated_margin_pct": c.margin_pct,
+                    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
                     "seller_metrics": {
                         "ebay_source": "derived from report comp links",
                         "aliexpress_source": "derived from report source links",
                     },
                 }
             )
+    assign_lanes(rows, traffic_share, traffic_margin_min, traffic_margin_max, traffic_target_margin)
     return rows, total
 
 
@@ -169,7 +274,13 @@ def main() -> int:
     evidence_images.mkdir(parents=True, exist_ok=True)
     manifest_dir.mkdir(parents=True, exist_ok=True)
 
-    records, total_candidates = candidate_records(md_paths)
+    records, total_candidates = candidate_records(
+        md_paths,
+        args.traffic_share,
+        args.traffic_margin_min,
+        args.traffic_margin_max,
+        args.traffic_target_margin,
+    )
 
     for row in records:
         cid = row.get("candidate_id") or row.get("title") or "candidate"

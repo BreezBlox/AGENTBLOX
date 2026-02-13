@@ -1,0 +1,266 @@
+[
+  {
+    "candidate_id": "C43",
+    "title": "NES 72 Pin Connector Replacement",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=nes+72+pin+connector+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=nes+72+pin+connector+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=NES+72+Pin+Connector+Replacement",
+    "match_score": 0.8625,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 59.9,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C43-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C43-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C44",
+    "title": "Wii Remote Battery Cover Door Replacement",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=wii+remote+battery+cover+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=wii+remote+battery+cover+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Wii+Remote+Battery+Cover+Door+Replacement",
+    "match_score": 0.8911,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 61.4,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C44-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C44-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C45",
+    "title": "Game Boy Cartridge Battery with Tabs (CR1616/CR2025)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=game+boy+cartridge+battery+tabs&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=game+boy+cartridge+battery+tabs&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Game+Boy+Cartridge+Battery+with+Tabs",
+    "match_score": 0.7114,
+    "match_label": "SIMILAR",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 61.0,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C45-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C45-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C46",
+    "title": "PS2 Controller Conductive Button Pad Rubber Set",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=ps2+controller+conductive+rubber+pad&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=ps2+controller+conductive+rubber+pad&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=PS2+Controller+Conductive+Button+Pad+Rubber+Set",
+    "match_score": 0.8375,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 60.5,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C46-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C46-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C47",
+    "title": "PSP UMD Door Replacement Shell",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=psp+umd+door+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=psp+umd+door+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=PSP+UMD+Door+Replacement+Shell",
+    "match_score": 0.8792,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 55.8,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C47-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C47-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C48",
+    "title": "Nintendo DS Lite Stylus Replacement (5 Pack)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=ds+lite+stylus+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=ds+lite+stylus+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Nintendo+DS+Lite+Stylus+Replacement",
+    "match_score": 0.9226,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 60.4,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C48-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C48-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C49",
+    "title": "GameCube Controller Stick Cap Replacement Set",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=gamecube+controller+stick+cap+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=gamecube+controller+stick+cap+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=GameCube+Controller+Stick+Cap+Replacement+Set",
+    "match_score": 0.8792,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 58.5,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C49-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C49-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C50",
+    "title": "PS Vita Analog Stick Replacement Module",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=ps+vita+analog+stick+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=ps+vita+analog+stick+replacement&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=PS+Vita+Analog+Stick+Replacement+Module",
+    "match_score": 0.8792,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 53.6,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C50-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C50-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C51",
+    "title": "SNES/N64 Game Box Protector Case (Clear PET)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=snes+box+protector&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=snes+box+protector&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=SNES+N64+Game+Box+Protector+Case",
+    "match_score": 0.773,
+    "match_label": "SIMILAR",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 48.8,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "TRAFFIC_SEED",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C51-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C51-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C52",
+    "title": "Comic Book Toploader Rigid Holder (10 Pack)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=comic+book+toploader&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=comic+book+toploader&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Comic+Book+Toploader+Rigid+Holder",
+    "match_score": 0.9164,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 48.8,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "TRAFFIC_SEED",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C52-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C52-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C53",
+    "title": "Video Game Disc Replacement Case (14mm, 10 Pack)",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=video+game+disc+replacement+case&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=video+game+disc+replacement+case&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Video+Game+Disc+Replacement+Case",
+    "match_score": 0.7496,
+    "match_label": "SIMILAR",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 48.8,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C53-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C53-aliexpress.svg"
+    ]
+  },
+  {
+    "candidate_id": "C54",
+    "title": "Cartridge Contact Cleaning Pen + Swab Kit",
+    "source_report": "ebay-arbitrage-plugin/reports/ebay-12-item-candidates-2026-02-12-retro-repair-collectors-batch-2.md",
+    "ebay_listing_url": "https://www.ebay.com/sch/i.html?_nkw=cartridge+contact+cleaner+kit&LH_Sold=1&LH_Complete=1&_sop=13",
+    "ebay_validation_url": "https://www.ebay.com/sch/i.html?_nkw=cartridge+contact+cleaner+kit&LH_Sold=1&LH_Complete=1&_sop=13",
+    "aliexpress_listing_url": "https://www.aliexpress.us/wholesale?SearchText=Cartridge+Contact+Cleaning+Pen+Swab+Kit",
+    "match_score": 0.8288,
+    "match_label": "EXACT",
+    "accepted_differences": "Allowed: photo angle/background/packaging only; core function and specs must align.",
+    "estimated_margin_pct": 55.3,
+    "sourcing_route": "ALIEXPRESS_FIRST_EBAY_SOLD_CONFIRMED",
+    "seller_metrics": {
+      "ebay_source": "derived from report comp links",
+      "aliexpress_source": "derived from report source links"
+    },
+    "lane": "CORE_MARGIN",
+    "image_paths": [
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C54-ebay.svg",
+      "ebay-arbitrage-plugin/reports/.evidence/20260213-142825/images/C54-aliexpress.svg"
+    ]
+  }
+]
